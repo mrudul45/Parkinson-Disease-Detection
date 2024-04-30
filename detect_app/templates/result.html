@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="result-container">
+        <div class="result">
+            {% if prediction %}
+                <h1>{{ prediction }}</h2>
+                {% if prediction == "You have Parkinson's Disease." %}
+                    
+                    <p>you have {{prediction2|floatformat:2}} % probability of having parkinson's disease</p>
+                {% else %}
+                 
+                    <p>you have {{prediction2|floatformat:2}} % probability of not having parkinson's disease</p>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

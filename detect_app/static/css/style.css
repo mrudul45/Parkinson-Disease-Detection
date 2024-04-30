@@ -1,0 +1,236 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../images/parkinson-1.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    height: 300px;
+    text-align: center;
+    background: rgb(255, 255, 255, 0.5);
+}
+
+
+.refresh-btn{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+ .title{
+    font-family: "Rubik Scribble", system-ui;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 4rem;
+    color: #ffffff;
+}
+
+.id{
+    height: 40px;
+    width: 250px;
+    border: none;
+    border-radius: 20px;
+    padding:0 10px;
+    outline: none;
+}
+
+input[type="file"] {
+    margin-bottom: 20px;
+}
+
+input[type="radio"] {
+    margin-bottom: 20px;
+    display: none;
+}
+
+
+.model-choice {
+    margin: 10px 0;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.models {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 80px auto;
+    flex-direction: row;
+}
+
+.models label {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.file {
+    display: none;
+}
+
+.upload {
+    height: 25px;
+    width: 150px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: #0056b3;
+    border-radius: 10px;
+    padding: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.loading_screen {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.lds-grid,
+.lds-grid div {
+    box-sizing: border-box;
+}
+
+.lds-grid {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-grid div {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: currentColor;
+    animation: lds-grid 1.2s linear infinite;
+}
+
+.lds-grid div:nth-child(1) {
+    top: 8px;
+    left: 8px;
+    animation-delay: 0s;
+}
+
+.lds-grid div:nth-child(2) {
+    top: 8px;
+    left: 32px;
+    animation-delay: -0.4s;
+}
+
+.lds-grid div:nth-child(3) {
+    top: 8px;
+    left: 56px;
+    animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(4) {
+    top: 32px;
+    left: 8px;
+    animation-delay: -0.4s;
+}
+
+.lds-grid div:nth-child(5) {
+    top: 32px;
+    left: 32px;
+    animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(6) {
+    top: 32px;
+    left: 56px;
+    animation-delay: -1.2s;
+}
+
+.lds-grid div:nth-child(7) {
+    top: 56px;
+    left: 8px;
+    animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(8) {
+    top: 56px;
+    left: 32px;
+    animation-delay: -1.2s;
+}
+
+.lds-grid div:nth-child(9) {
+    top: 56px;
+    left: 56px;
+    animation-delay: -1.6s;
+}
+
+@keyframes lds-grid {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.result-container {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    height: 200px;
+    text-align: center;
+    background: rgba(231, 228, 228, 0.91);
+    margin-top: -150px;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 6000;
+    font-style: normal;
+}
+
+.result-container #prediction{
+    font-size: 2.5rem;
+    color: #000;
+}
